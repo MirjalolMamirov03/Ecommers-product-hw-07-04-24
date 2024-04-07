@@ -1,0 +1,41 @@
+@import url(./fonts.css);
+
+/* CUSTOM PROPS */
+:root {
+    --textColor: #69707D;
+    --darkText: #1D2026;
+    --background: #FF7E1B;
+    --lightBack: #F6F8FD;
+    --white: #FFF;
+    --black: #000;
+    --Kumbh_Sans: "Kumbh_Sans";
+}
+
+/* //CUSTOM PROPS */
+
+/* GLOBAL-STYLE */
+*,
+*,::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* //GLOBAL-STYLE */
