@@ -1,0 +1,49 @@
+/* max-width: 375px */
+
+@media (max-width: 375px) {
+
+    .nav-logo-menu {
+        align-items: center;
+        justify-content: center;
+        column-gap: 15px !important;
+    }
+
+    .nav-menu {
+        transform: scale(0);
+        position: fixed;
+    }
+
+    .menu-icon {
+        width: 20px;
+        height: 30px;       
+    }
+
+    .menu-icon-line {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #5f6267;
+        position: relative;
+    }
+
+    .menu-icon-line::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #5f6267;
+        position: absolute;
+        left: 0;
+        top: -5px;
+    }
+    .menu-icon-line::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #5f6267;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+    }
+}
