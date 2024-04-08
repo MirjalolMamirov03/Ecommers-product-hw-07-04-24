@@ -59,6 +59,10 @@
         transform: translateX(-200px);                        
     }
 
+    .menu-icon {
+        transform: scale(1);
+    }
+
     .menu-link {
         color: var(--darkText);
         font-size: 18px;
