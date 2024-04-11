@@ -71,6 +71,10 @@ ul {
     border-bottom: 1px solid #E4E9F2;
 }
 
+.menu-icon {
+    transform: scale(0);
+}
+
 .nav-logo-menu {
     display: flex;
     column-gap: 56px;

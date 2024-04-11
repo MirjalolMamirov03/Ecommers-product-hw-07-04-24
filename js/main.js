@@ -1,16 +1,25 @@
 
 const menuIcon = document.querySelector('#menu-icon')
 const menuActive = document.querySelector('.menu-active')
+let menuItem = [...document.querySelectorAll('.menu-item')]
 
 menuIcon.addEventListener('click', function () {
     menuActive.classList.toggle('display-none')
-    // menuIcon.classList.remove('fa-bars')
-    // menuIcon.classList.add('fa-times')
-
-    if (menuIcon.className == 'fas fa-bars') {
-        menuIcon.className = 'fas fa-times'
-    }else if (menuIcon.className == 'fas fa-times') {
-        menuIcon.className = 'fas fa-bars'
+    if (menuIcon.classList.contains('fa-bars')) {
+        menuIcon.classList.replace('fa-bars', 'fa-times')
+    } else if (menuIcon.classList.contains('fa-times')) {
+        menuIcon.classList.replace('fa-times', 'fa-bars')
     }
 })
+
+
+// console.log('dsafa');
+for (let i = 0; i < menuItem.length; i++) {
+    menuItem[i].onclick = () => {
+        menuItem[i].classList.add('active-item')
+    }
+}
+
+
+// console.log(menuIcon.classList.replace('fa-bars', 'fa-times'))
 
