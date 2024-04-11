@@ -24,8 +24,8 @@
                     <!-- Active holatda fa-bars .fa-times ga o'zgaradi  -->
                     <i class="fas fa-bars menu-icon" id="menu-icon"></i>
 
-                    <!-- Active holatda .display-none qo'shiladi --> 
-          
+                    <!-- Active holatda .display-none qo'shiladi -->
+
                     <img src="./img/sneakers 2.svg" alt="Site logo" class="site-logo">
                     <ul class="nav-menu menu menu-active" id="menu-active">
 
@@ -52,7 +52,9 @@
                 <ul class="nav-profil">
                     <li class="profil-item">
                         <a href="#!" class="cart-shopping">
-                            <i class="fal fa-shopping-cart"></i>
+                            <i class="fal fa-shopping-cart cart-icon header-icon"></i>
+
+                            <div class="header-icon__count">0</div>
                         </a>
                     </li>
                     <li class="profile-item">
@@ -69,7 +71,7 @@
 
 
     <!-- MAIN-SECTION -->
-    <section class="site-section main">
+    <section class="main-section main">
         <div class="container main-flex">
             <div class="main-image">
                 <img src="./img/Rectangle.svg" alt="site-image__img" class="site-image__img">
@@ -80,32 +82,34 @@
                     <img src="./img/Rectangle Copy 4.svg" alt="image-box__item" class="image-box__item">
                 </div>
             </div>
-            
+
             <div class="main-desc">
                 <p class="main-text">Sneaker Company</p>
                 <h2 class="main-title">Fall Limited Edition Sneakers</h2>
-                <p 
-                class="main-desc__text">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
+                <p class="main-desc__text">These low-profile sneakers are your perfect casual wear companion. Featuring
+                    a durable rubber outer sole, they’ll withstand everything the weather can offer.
                 </p>
                 <div class="main-cost__box">
                     <div class="cost-box__price">
-                        <p class="cost-box-newPrice">$125.00</p>
-                        <p class="cost-box-oldPrice">$250.00</p>
+                        <p class="cost-box-newPrice">$0</p>
+                        <p class="cost-box-oldPrice">$0</p>
 
                     </div>
                     <div class="cost-box__sale">50%</div>
                 </div>
-                
+
                 <div class="order-buttons">
                     <div class="count-box">
                         <span class="count-box__item" data-symbol="count-box__minus">-</span>
                         <p class="count-num">0</p>
                         <span class="count-box__item" data-symbol="count-box__plus">+</span>
                     </div>
-                    <button class="add-cart__btn"><i class="fal fa-shopping-cart"></i>  <p class="cart-btn__text">Add to cart</p></button>
+                    <button class="add-cart__btn"><i class="fal fa-shopping-cart cart-icon main-icon"></i>
+                        <p class="cart-btn__text">Add to cart</p>
+                    </button>
                 </div>
             </div>
-            
+
         </div>
     </section>
 

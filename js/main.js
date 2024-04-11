@@ -16,10 +16,28 @@ menuIcon.addEventListener('click', function () {
 // console.log('dsafa');
 for (let i = 0; i < menuItem.length; i++) {
     menuItem[i].onclick = () => {
-        menuItem[i].classList.add('active-item')
+        menuItem[i].classList.toggle('active-item')
     }
 }
 
 
 // console.log(menuIcon.classList.replace('fa-bars', 'fa-times'))
 
+
+
+
+
+
+
+// Main-section JS
+
+sneakers: {
+    
+}
+
+const cartBtnText = document.querySelector('.add-cart__btn');
+let headerIconCount = document.querySelector('.header-icon__count')
+
+cartBtnText.addEventListener('click', function() {
+    headerIconCount.style.display = "unset";
+})
