@@ -69,6 +69,8 @@ ul {
     padding-top: 28px;
     padding-bottom: 0px;
     border-bottom: 1px solid #E4E9F2;
+    position: relative;
+    transition: .5s;
 }
 
 .menu-icon {
@@ -120,6 +122,51 @@ ul {
     align-items: center;
     column-gap: 45px;
     padding-bottom: 35px;
+}
+
+.cart-box {
+    width: 360px;
+    height: 256px;
+    padding-top: 24px;
+    padding-bottom: 32px;
+    /* padding-left: 24px;
+    padding-right: 24px; */
+    border-radius: 10px;
+    background: var(--white);
+    box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.50);
+    position: absolute;
+    top: 94px;
+    right: -76px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 23px;
+    display: none;
+    opacity: 0;
+    /* transform: scale(0); */
+}
+
+.cart-box__title {
+    margin-left: 24px;
+    color: var(--darkText);
+    font-family: var(--Kumbh_Sans);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.cart-box__line {
+    width: 100%;
+    height: 1px;
+    background-color: #E4E9F2;
+}
+
+.cart-box__body {
+    text-align: center;
+    color: var(--textColor);
+    text-align: center;
+    font-family: var(--Kumbh_Sans);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
 }
 
 .profil-image {
