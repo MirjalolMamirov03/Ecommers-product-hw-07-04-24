@@ -61,13 +61,38 @@ const headerIcon = document.querySelector('.header-icon')
 let cartBox = document.querySelector('.cart-box')
 
 headerIcon.addEventListener('click', function () {
-    cartBox.style.display = "block"
+
+    // alert('salom')
+    if (cartBox.style.display == "none") {
+        cartBox.style.display = "block"
+
+        setTimeout(() => {
+            cartBox.style.opacity = "1"
+        }, 500);
+    }
+    // else if ((cartBox.style.display == "block") || (cartBox.style.opacity == "1")) {
+    //     cartBox.style.display = "none"
+
+    //     setTimeout(() => {
+    //         cartBox.style.opacity = "0"
+    //     }, 500);
+    // }
+
+    // cartBox.style.display = "block"
     // cartBox.style.transform.scale = "1"
 
-    setTimeout(() => {
-        cartBox.style.opacity = "1"
-    }, 500);
+    // setTimeout(() => {
+    //     cartBox.style.opacity = "1"
+    // }, 500);
 })
+
+// headerIcon.addEventListener('click', function(event) {
+//     // console.log(event.currentTarget);
+
+//     if (event.target == event.currentTarget) {
+//         // cartBox.style.display = "none"
+//     }
+// })
 
 let countBoxItem = [...document.querySelectorAll('.count-box__item')]
 let countNum = document.querySelector('.count-num')
@@ -150,16 +175,37 @@ for (let i = 0; i < imageBoxItem.length; i++) {
 
 let siteImageImg = document.querySelector('.site-image__img')
 let srcImg = siteImageImg.getAttribute('src')
-        console.log(srcImg)
+console.log(srcImg)
 for (let i = 0; i < imageBoxItem.length; i++) {
     imageBoxItem[i].addEventListener('click', function () {
         // alert('salom')
-    
+
         let srcItem = imageBoxItem[i].getAttribute('src')
         console.log(srcItem)
 
-        siteImageImg.setAttribute('src', srcItem) 
+        siteImageImg.setAttribute('src', srcItem)
 
     })
-    
+
 }
+
+
+
+
+// Abosolute__image
+
+const imageAbsolute = document.querySelector('.image__absolute')
+let imageAbsoluteBox = document.querySelector('.image__absolute-box')
+
+siteImageImg.addEventListener('click', function () {
+
+    // alert('sdadsa')
+
+    setTimeout(() => {
+        imageAbsoluteBox.style.display = "block"
+        imageAbsoluteBox.style.opacity = ".75"
+        imageAbsolute.style.top = "unset"
+    }, 600);
+
+})
+

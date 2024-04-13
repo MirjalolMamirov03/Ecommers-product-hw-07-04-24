@@ -229,10 +229,68 @@ ul {
     justify-content: center;
 }
 
+/* Js uchun yozildi */
+
+
+.image__absolute {
+    position: absolute;
+    top: -100%;
+}
+
+.image__absolute-icon {
+    position: absolute;
+    top: -55px;
+    right: 0;
+    color: var(--white);
+}
+
+.image__absolute-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    display: none;
+}
+
+.image__absolute-buttons {
+    position: absolute;
+    bottom: 55%;
+    display: flex;
+    justify-content: space-between;
+    width: 110%;   
+}
+
+.absolute-button {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--darkText);
+    font-size: 30px;
+}
+
+.site-image__absolute {
+    width: 550px !important;
+    height: 550px !important;
+}
+
+/* //Js uchun yozildi */
+
+
 .site-image__img {
     width: 445px;
     height: 445px;
+    object-fit: cover;
+    overflow: hidden;
 }
+
+
 
 .site-image__box {
     display: flex;
