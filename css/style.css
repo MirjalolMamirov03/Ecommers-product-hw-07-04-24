@@ -244,6 +244,11 @@ ul {
     color: var(--white);
 }
 
+.image__absolute-icon:hover {
+    cursor: pointer;
+    color: var(--background);
+}
+
 .image__absolute-box {
     position: absolute;
     left: 0;
@@ -273,6 +278,12 @@ ul {
     justify-content: center;
     color: var(--darkText);
     font-size: 30px;
+    border: none;
+}
+
+.absolute-button:hover {
+    cursor: pointer;
+    color: var(--background);
 }
 
 .site-image__absolute {
@@ -288,6 +299,10 @@ ul {
     height: 445px;
     object-fit: cover;
     overflow: hidden;
+}
+
+.site-image__img:hover {
+    cursor: pointer;
 }
 
 

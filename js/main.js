@@ -63,27 +63,15 @@ let cartBox = document.querySelector('.cart-box')
 headerIcon.addEventListener('click', function () {
 
     // alert('salom')
-    if (cartBox.style.display == "none") {
-        cartBox.style.display = "block"
 
-        setTimeout(() => {
-            cartBox.style.opacity = "1"
-        }, 500);
-    }
-    // else if ((cartBox.style.display == "block") || (cartBox.style.opacity == "1")) {
-    //     cartBox.style.display = "none"
+    cartBox.style.display = "block"
 
-    //     setTimeout(() => {
-    //         cartBox.style.opacity = "0"
-    //     }, 500);
+    cartBox.style.opacity = "1"
+
+    // if (cartBox.style.display == "block") {
+    //     location.reload()
     // }
 
-    // cartBox.style.display = "block"
-    // cartBox.style.transform.scale = "1"
-
-    // setTimeout(() => {
-    //     cartBox.style.opacity = "1"
-    // }, 500);
 })
 
 // headerIcon.addEventListener('click', function(event) {
@@ -91,6 +79,7 @@ headerIcon.addEventListener('click', function () {
 
 //     if (event.target == event.currentTarget) {
 //         // cartBox.style.display = "none"
+//         location.reload()
 //     }
 // })
 
@@ -196,6 +185,7 @@ for (let i = 0; i < imageBoxItem.length; i++) {
 
 const imageAbsolute = document.querySelector('.image__absolute')
 let imageAbsoluteBox = document.querySelector('.image__absolute-box')
+const imageAbsoluteIcon = document.querySelector('.image__absolute-icon')
 
 siteImageImg.addEventListener('click', function () {
 
@@ -208,4 +198,9 @@ siteImageImg.addEventListener('click', function () {
     }, 600);
 
 })
+
+imageAbsoluteIcon.onclick = () => {
+    // alert('salom')
+    location.reload()
+}
 
