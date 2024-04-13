@@ -15,12 +15,12 @@ menuIcon.addEventListener('click', function () {
 
 
 for (let i = 0; i < menuItem.length; i++) {
-   menuItem[i].addEventListener('click', function () {
-    for (let j = 0; j < menuItem.length; j++) {
-        menuItem[j].classList.remove('active-item')        
-    }
-    menuItem[i].classList.add('active-item') 
-   })
+    menuItem[i].addEventListener('click', function () {
+        for (let j = 0; j < menuItem.length; j++) {
+            menuItem[j].classList.remove('active-item')
+        }
+        menuItem[i].classList.add('active-item')
+    })
 }
 
 // console.log(menuIcon.classList.replace('fa-bars', 'fa-times'))
@@ -38,9 +38,11 @@ sneakers = {
     realPrice: 250.00,
     amount: 0,
     get calcSum() {
-        this.amount * this.price
+        return this.amount * this.price
     }
 }
+
+console.log(sneakers.amount)
 
 let costBoxNewPrice = document.querySelector('.cost-box-newPrice')
 let costBoxOldPrice = document.querySelector('.cost-box-oldPrice')
@@ -73,54 +75,82 @@ let countNum = document.querySelector('.count-num')
 
 // countNum.innerHTML++
 // console.log(countNum.innerHTML--);
-
+let count = sneakers.amount
 for (let i = 0; i < countBoxItem.length; i++) {
     sym = countBoxItem[i].getAttribute('data-symbol')
-    // console.log(sym);
-
-    let count;
-    // let num = 0;
+    // console.log(sym);   
     countBoxItem[i].addEventListener('click', function () {
 
-        // alert('hello')
+        // alert('hello')       
         if (countBoxItem[i].getAttribute('data-symbol') == 'plus') {
-            countNum.innerHTML++
-            headerIconCount.innerHTML++
-            sneakers.amount++
-            // count++
+            count++
 
-            // console.log(countBoxItem[i].getAttribute('data-symbol'));
-
-        } else if (countBoxItem[i].getAttribute('data-symbol') == 'minus' && countNum.innerHTML > 0) {
-            countNum.innerHTML--
-            headerIconCount.innerHTML--
-            sneakers.amount--
-            // count--
-
-
-            // console.log(countBoxItem[i].getAttribute('data-symbol'));
+        } else if (countBoxItem[i].getAttribute('data-symbol') == 'minus' && count > 0) {
+            count--
         }
 
-        count = countNum.innerHTML
+
+        countNum.innerHTML = count
+        console.log(sneakers.amount)
+        headerIconCount.innerHTML = count
         sneakers.amount = count
-
-
     })
 
 }
-
+console.log(count)
 console.log(sneakers.amount);
 
-// num = count;
-// console.log(count);
-
-
-// countNum.innerHTML = sneakers.amount
-// console.log(sneakers.amount);
-
-
 let cartBoxBody = document.querySelector('.cart-box__body')
-let cartBoxBodyTitle = "Fall Limited Edition Sneakers \n"
-cartBoxBodyTitle += `${costBoxNewPrice.innerHTML} x ${sneakers.amount} = $${sneakers.calcSum}.00`
+let cartBoxBodyCheck = "Fall Limited Edition Sneakers \n"
+if (sneakers.amount > 0) {
+    cartBoxBodyCheck += `${costBoxNewPrice.innerHTML} x ${count} = $${sneakers.calcSum}.00`
+}
 
-cartBoxBody.innerHTML = `${cartBoxBodyTitle}`
+cartBoxBody.innerHTML = `${cartBoxBodyCheck}`
+
+
+
+
+// Images
+
+const imageBoxItem = [...document.querySelectorAll('.image-box__item')]
+
+// console.log(imageBoxItem)
+
+for (let i = 0; i < imageBoxItem.length; i++) {
+
+    imageBoxItem[i].addEventListener('click', function () {
+        // alert('salom')
+
+        for (let j = 0; j < imageBoxItem.length; j++) {
+            imageBoxItem[j].classList.remove('image-item__active')
+        }
+        imageBoxItem[i].classList.add('image-item__active')
+    })
+
+    imageBoxItem[i].addEventListener('mouseover', function () {
+        // alert('salom')
+
+        for (let j = 0; j < imageBoxItem.length; j++) {
+            imageBoxItem[j].style.opacity = "1"
+        }
+        imageBoxItem[i].style.opacity = "0.7"
+    })
+}
+
+
+let siteImageImg = document.querySelector('.site-image__img')
+let srcImg = siteImageImg.getAttribute('src')
+        console.log(srcImg)
+for (let i = 0; i < imageBoxItem.length; i++) {
+    imageBoxItem[i].addEventListener('click', function () {
+        // alert('salom')
+    
+        let srcItem = imageBoxItem[i].getAttribute('src')
+        console.log(srcItem)
+
+        siteImageImg.setAttribute('src', srcItem) 
+                
+    })
+    
+}
