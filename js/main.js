@@ -13,13 +13,15 @@ menuIcon.addEventListener('click', function () {
 })
 
 
-// console.log('dsafa');
-for (let i = 0; i < menuItem.length; i++) {
-    menuItem[i].onclick = () => {
-        menuItem[i].classList.toggle('active-item')
-    }
-}
 
+for (let i = 0; i < menuItem.length; i++) {
+   menuItem[i].addEventListener('click', function () {
+    for (let j = 0; j < menuItem.length; j++) {
+        menuItem[j].classList.remove('active-item')        
+    }
+    menuItem[i].classList.add('active-item') 
+   })
+}
 
 // console.log(menuIcon.classList.replace('fa-bars', 'fa-times'))
 
