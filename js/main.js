@@ -68,9 +68,9 @@ headerIcon.addEventListener('click', function () {
 
     cartBox.style.opacity = "1"
 
-    // if (cartBox.style.display == "block") {
-    //     location.reload()
-    // }
+    if (cartBox.style.display == "block") {
+        location.reload()
+    }
 
 })
 
@@ -127,7 +127,7 @@ cartBoxBody.innerHTML = `${cartBoxBodyCheck}`
 
 // Images
 
-const imageBoxItem = [...document.querySelectorAll('.image-box__item')]
+let imageBoxItem = [...document.querySelectorAll('.image-box__item')]
 
 // console.log(imageBoxItem)
 
@@ -175,7 +175,6 @@ for (let i = 0; i < imageBoxItem.length; i++) {
         siteImageImg.setAttribute('src', srcItem)
 
     })
-
 }
 
 
@@ -203,4 +202,42 @@ imageAbsoluteIcon.onclick = () => {
     // alert('salom')
     location.reload()
 }
+
+
+// Slider
+
+const next = document.querySelector('.next')
+const prev = document.querySelector('.prev')
+let siteImageAbsolute = document.querySelector('.site-image__absolute')
+
+let k = 0;
+
+next.onclick = () => {
+    // alert('salom')
+
+    // console.log(imageBoxItem[k])
+    let imgSrc = imageBoxItem[k].getAttribute('src')
+    console.log(imgSrc);
+    siteImageAbsolute.setAttribute('src', imgSrc)
+    k++
+
+    if (k >= imageBoxItem.length) {
+        k = 0
+    }  
+}
+
+prev.onclick = () => {
+    // alert('salom')
+
+    // console.log(imageBoxItem[k])
+    let imgSrc = imageBoxItem[k].getAttribute('src')
+    console.log(imgSrc);
+    siteImageAbsolute.setAttribute('src', imgSrc)
+    k--
+
+    if (k < 0) {
+        k = imageBoxItem.length-1
+    }  
+}
+
 
