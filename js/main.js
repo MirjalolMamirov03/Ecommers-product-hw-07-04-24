@@ -136,6 +136,15 @@ for (let i = 0; i < imageBoxItem.length; i++) {
         }
         imageBoxItem[i].style.opacity = "0.7"
     })
+
+    imageBoxItem[i].addEventListener('mouseout', function () {
+        // alert('salom')
+
+        for (let j = 0; j < imageBoxItem.length; j++) {
+            imageBoxItem[j].style.opacity = "1"
+        }
+        imageBoxItem[i].style.opacity = "1"
+    })
 }
 
 
@@ -150,7 +159,7 @@ for (let i = 0; i < imageBoxItem.length; i++) {
         console.log(srcItem)
 
         siteImageImg.setAttribute('src', srcItem) 
-                
+
     })
     
 }
