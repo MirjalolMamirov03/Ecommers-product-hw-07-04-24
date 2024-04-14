@@ -68,9 +68,9 @@ headerIcon.addEventListener('click', function () {
 
     cartBox.style.opacity = "1"
 
-    if (cartBox.style.display == "block") {
-        location.reload()
-    }
+    // if (cartBox.style.display == "block") {
+    //     location.reload()
+    // }
 
 })
 

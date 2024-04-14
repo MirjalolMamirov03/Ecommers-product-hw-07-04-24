@@ -215,9 +215,10 @@ ul {
 }
 
 .main-flex {
+    width: 100%;
+    margin: auto;
     display: flex;
     column-gap: 125px;
-    justify-content: center;
     align-items: center;
 }
 
@@ -235,6 +236,7 @@ ul {
 .image__absolute {
     position: absolute;
     top: -100%;
+    left: 40%;
 }
 
 .image__absolute-icon {
@@ -368,7 +370,8 @@ ul {
 
 .main-cost__box {
     display: flex;
-    column-gap: 16px;
+    flex-direction: column;
+    row-gap: 10px;
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 32px;
@@ -376,8 +379,8 @@ ul {
 
 .cost-box__price {
     display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+    /* flex-direction: column; */
+    column-gap: 15px;
     align-items: flex-start;
 }
 
