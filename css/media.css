@@ -116,10 +116,6 @@
         display: none;
     }
 
-    .image__absolute-box {
-        /* display: block !important; */
-    }
-
     .image__absolute {
         display: block;
         position: relative !important;
